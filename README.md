@@ -1,1 +1,0 @@
-# qr-entry-system
