@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Admin Dashboard</h1>
+
+    <!-- USERS -->
+
+    <div class="card">
+
+        <h2>Registered Users</h2>
+
+        <table>
+
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+            </tr>
+
+            {% for user in users %}
+
+            <tr>
+                <td>{{ user[0] }}</td>
+                <td>{{ user[1] }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <!-- ENTRIES -->
+
+    <div class="card">
+
+        <h2>Attendance Records</h2>
+
+        <table>
+
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Time</th>
+            </tr>
+
+            {% for entry in entries %}
+
+            <tr>
+                <td>{{ entry[0] }}</td>
+                <td>{{ entry[1] }}</td>
+                <td>{{ entry[2] }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <a href="/">
+        <button>
+            Back To Home
+        </button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

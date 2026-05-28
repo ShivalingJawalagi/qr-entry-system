@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Success</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="success-card">
+
+        <h1>User Registered Successfully</h1>
+
+        <h2>{{ name }}</h2>
+
+        <h3>{{ user_id }}</h3>
+
+        <img src="/qrcodes/{{ user_id }}.png"
+        class="qr-image">
+
+        <a href="/">
+            <button>
+                Go Back
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

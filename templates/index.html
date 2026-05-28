@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>QR Entry System</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+
+        <h1>QR Entry Management System</h1>
+
+        <a href="/admin">
+            <button class="admin-btn">
+                Admin Panel
+            </button>
+        </a>
+
+    </div>
+
+    <div class="grid">
+
+        <!-- REGISTRATION -->
+
+        <div class="card">
+
+            <h2>User Registration</h2>
+
+            <form action="/register" method="POST">
+
+                <input type="text"
+                name="name"
+                placeholder="Enter Name"
+                required>
+
+                <button type="submit">
+                    Generate QR & ID
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- MANUAL ENTRY -->
+
+        <div class="card">
+
+            <h2>Manual Entry</h2>
+
+            <form action="/manual" method="POST">
+
+                <input type="text"
+                name="userid"
+                placeholder="Enter User ID"
+                required>
+
+                <button type="submit">
+                    Save Entry
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- QR SCANNER -->
+
+        <div class="card">
+
+            <h2>QR Scanner</h2>
+
+            <p>
+                Open camera and scan QR code.
+            </p>
+
+            <a href="/scan">
+
+                <button>
+                    Open Scanner
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

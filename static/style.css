@@ -1,0 +1,156 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI', sans-serif;
+    background:#f5efe6;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* Header */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+h1{
+    color:#6f4e37;
+    font-size:38px;
+    margin:0;
+}
+
+/* Grid */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+/* Cards */
+
+.card,
+.success-card{
+    background:#fffaf5;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 4px 12px rgba(111,78,55,0.12);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.success-card{
+    text-align:center;
+}
+
+/* Headings */
+
+h2{
+    color:#8b5e3c;
+    margin-bottom:20px;
+}
+
+/* Inputs */
+
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid #d6c2b0;
+    border-radius:10px;
+    margin-top:10px;
+    font-size:15px;
+    box-sizing:border-box;
+    outline:none;
+    background:#fff;
+}
+
+input:focus{
+    border-color:#8b5e3c;
+}
+
+/* Buttons */
+
+button,
+.admin-btn{
+    background:#8b5e3c;
+    color:white;
+    border:none;
+    padding:13px 20px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:18px;
+    transition:0.3s;
+    text-decoration:none;
+    display:inline-block;
+}
+
+button{
+    width:100%;
+}
+
+button:hover,
+.admin-btn:hover{
+    background:#6f4e37;
+}
+
+/* Tables */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:#fffaf5;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+table th{
+    background:#8b5e3c;
+    color:white;
+}
+
+table th,
+table td{
+    padding:14px;
+    border:1px solid #eadfce;
+    text-align:center;
+}
+
+/* QR Image */
+
+.qr-image{
+    width:220px;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    h1{
+        font-size:28px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+}
